@@ -1,0 +1,15 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "Zavrsni rad",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Marko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-persist": "^2.1.0"
+  }
+}
