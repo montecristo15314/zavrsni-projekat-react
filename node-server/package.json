@@ -4,12 +4,14 @@
   "description": "Zavrsni rad",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js"
   },
   "author": "Marko",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.16.4",
-    "node-persist": "^2.1.0"
+    "node-persist": "^2.1.0",
+    "randomstring": "^1.1.5"
   }
 }
