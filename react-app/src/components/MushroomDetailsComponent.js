@@ -1,19 +1,25 @@
 import React from 'react';
 
 export default class MushroomDetailsComponent extends React.Component {
-    constructor(props) {
-        parent(props);
-
-        this.props = props;
-    }
 
     render() {
-        return (
+        const { toggleVisibility, visibility, mushroom } = this.props;
+        const {commonName, latinName, edibility, description, image} = mushroom;
+
+        return visibility && (
             <div>
                 <label>Common name: </label>
-                {this.props.mushroom.commonName}
+                {commonName}
                 <label>Latin name: </label>
-                {this.props.mushroom.latinName}
+                {latinName}
+                <label>Edibility: </label>
+                {edibility}
+                <label>Description: </label>
+                {description}
+                <label>Image: </label>
+                <img src={image} alt={latinName} />
+
+                <button onClick={toggleVisibility}>CLOSE</button>
             </div>
         );
     }

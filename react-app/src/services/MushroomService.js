@@ -8,20 +8,23 @@ const ENDPOINTS = {
 class MushroomService {
     httpClient = httpService.client;
 
-    getMushrooms = () => {
-        return this.httpClient.get(ENDPOINTS.MUSHROOMS);
+    getMushrooms = async () => {
+        return await this.httpClient.get(ENDPOINTS.MUSHROOMS);
     };
 
-    getMushroom = (id) => {
-        return this.httpClient.get(ENDPOINTS.MUSHROOM.replace(':id', id));
+    getMushroom = async (id) => {
+        return await this.httpClient.get(ENDPOINTS.MUSHROOM.replace(':id', id));
     };
 
-    postMushroom = (mushroom) => {
-        return this.httpClient.post(ENDPOINTS.MUSHROOMS, mushroom);
+    postMushroom = async (mushroom) => {
+        console.log('mushroom: ', mushroom);
+        const foobar = await this.httpClient.post(ENDPOINTS.MUSHROOMS, mushroom);
+        console.log('posted mushroom');
+        return foobar;
     };
 
-    putMushroom = (mushroom) => {
-        return this.httpClient.put(ENDPOINTS.MUSHROOM.replace(':id', mushroom.id));
+    putMushroom = async (mushroom) => {
+        return await this.httpClient.put(ENDPOINTS.MUSHROOM.replace(':id', mushroom.id));
     };
 
 }

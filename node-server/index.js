@@ -10,7 +10,14 @@ const idLength = 5;
 //initialize storage
 storage.initSync();
 //middleware for getting the entire request body
-app.use(bodyParser);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 //list of routes
 app.get('/', (req, res) => {
@@ -40,7 +47,7 @@ app.get('/mushrooms/:id', (req, res) => {
 app.post('/mushrooms', (req, res) => {
     let mushroom = req.body;
     mushroom.id = randomstring.generate(idLength);
-    mushroom = saveMushroom(mushroom);
+    mushroom = saveMushroom(mushroom.id, mushroom);
 
     res.send(mushroom);
 });

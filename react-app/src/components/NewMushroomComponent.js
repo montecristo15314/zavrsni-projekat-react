@@ -1,4 +1,5 @@
 import React from 'react';
+import mushroomService from '../services/MushroomService';
 
 export default class NewMushroomComponent extends React.Component {
 
@@ -8,8 +9,8 @@ export default class NewMushroomComponent extends React.Component {
         commonName: '',
         latinName: '',
         description: '',
-        // edibility: '',
-        // image: '',
+        edibility: 'Indedible',
+        image: ''
       };
     }
 
@@ -25,42 +26,54 @@ export default class NewMushroomComponent extends React.Component {
       this.setState({description: event.target.value});
     };
 
-    // handleChangeEdibility = (event) => {
-    //   this.setState({edibility: event.target.value});
-    // };
+    handleChangeEdibility = (event) => {
+      this.setState({edibility: event.target.value});
+    };
 
-    handleSubmit = (event) => {
+    handleChangeImage = (event) => {
+      this.setState({image: event.target.value});
+    };
+
+    handleSubmit = async (event) => {
       event.preventDefault();
 
-      //TODO: ovde ide submit statea na server kroz neki servis
       console.log('submit to server');
+
+      await mushroomService.postMushroom(this.state);
+
+      this.props.toggleVisibility();
+
     };
 
     render() {
-      return (
+      let { visibility, toggleVisibility } = this.props;
+
+      return visibility && (
         <div className="my-modal" id="modal-add-mushroom">
-          <div className="modal-content"> 
-          <span className="close close-modal">&times;</span>
+          <div className="modal-content">
+          <span className="close close-modal" onClick={toggleVisibility}>&times;</span>
           <h2>Enter the mushroom details</h2>
+
           <form onSubmit={this.handleSubmit}>
-          
+
             <label>Common name: </label>
-            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeIme} /> 
+            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeCommonName} />
 
             <label>Latin name: </label>
-            <input type='text' placeholder='Latin name' value={this.state.latinName} onChange={this.handleChangePrezime} />
+            <input type='text' placeholder='Latin name' value={this.state.latinName} onChange={this.handleChangeLatinName} />
 
             <label>Description: </label>
             <input type='textarea' placeholder='Description' value={this.state.description} onChange={this.handleChangeDescription} />
 
             <label>Edibility: </label>
-            <select>
-              <option>Edible</option>
-              <option>Poisonous</option>
-              <option>Inedible</option>
+            <select value={this.state.edibility} onChange={this.handleChangeEdibility}>
+              <option value='Inedible'>Inedible</option>
+              <option value='Edible'>Edible</option>
+              <option value='Poisonous'>Poisonous</option>
             </select>
+
             <label>Image URL: </label>
-            <input type='text' placeholder='Image URL'/>
+            <input type='text' placeholder='Image URL' value={this.state.image} onChange={this.handleChangeImage}/>
 
             <input type='submit' value='Submit' />
           </form>
