@@ -41,6 +41,14 @@ h2 {
     
 }
 
+.modal-content select {
+    padding: .2em;
+    margin: .3em;
+    width: 300px;
+    text-align: center;
+    font-size: 1em;
+}
+
 .modal-content label {
     font-size: 1.1em;
     font-weight: bold;

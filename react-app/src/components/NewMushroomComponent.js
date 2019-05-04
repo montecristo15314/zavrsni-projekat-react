@@ -38,9 +38,9 @@ export default class NewMushroomComponent extends React.Component {
 
     render() {
       return (
-        <div class="my-modal" id="modal-add-mushroom">
-          <div class="modal-content"> 
-          <span class="close close-modal">&times;</span>
+        <div className="my-modal" id="modal-add-mushroom">
+          <div className="modal-content"> 
+          <span className="close close-modal">&times;</span>
           <h2>Enter the mushroom details</h2>
           <form onSubmit={this.handleSubmit}>
           
@@ -52,6 +52,15 @@ export default class NewMushroomComponent extends React.Component {
 
             <label>Description: </label>
             <input type='textarea' placeholder='Description' value={this.state.description} onChange={this.handleChangeDescription} />
+
+            <label>Edibility: </label>
+            <select>
+              <option>Edible</option>
+              <option>Poisonous</option>
+              <option>Inedible</option>
+            </select>
+            <label>Image URL: </label>
+            <input type='text' placeholder='Image URL'/>
 
             <input type='submit' value='Submit' />
           </form>
