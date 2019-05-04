@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './css/FooterComponent.css'
-import FooterComponent from './components/FooterComponent.js'
+import './css/FooterComponent.css';
+import './css/NewMushroomComponent.css';
+import FooterComponent from './components/FooterComponent.js';
+import NewMushroomComponent from './components/NewMushroomComponent'
 
 function App() {
   return (
+
     <div className="App">
+      <NewMushroomComponent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -21,7 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }

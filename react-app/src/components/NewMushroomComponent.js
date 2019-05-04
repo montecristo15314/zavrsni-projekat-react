@@ -38,11 +38,14 @@ export default class NewMushroomComponent extends React.Component {
 
     render() {
       return (
-        <div>
+        <div class="my-modal" id="modal-add-mushroom">
+          <div class="modal-content"> 
+          <span class="close close-modal">&times;</span>
           <h2>Enter the mushroom details</h2>
           <form onSubmit={this.handleSubmit}>
+          
             <label>Common name: </label>
-            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeIme} />
+            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeIme} /> 
 
             <label>Latin name: </label>
             <input type='text' placeholder='Latin name' value={this.state.latinName} onChange={this.handleChangePrezime} />
@@ -52,6 +55,7 @@ export default class NewMushroomComponent extends React.Component {
 
             <input type='submit' value='Submit' />
           </form>
+          </div>
         </div>
       );
     }
