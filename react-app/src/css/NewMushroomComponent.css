@@ -1,6 +1,4 @@
-/* #modal-add-mushroom {
-    display: none;
-} */
+
 
 h2 {
     font-size: 1.4em;
@@ -28,7 +26,8 @@ h2 {
     margin-left: -250px;
     display: block;
     width: 500px; 
-    text-align: center; padding: 1rem ; 
+    text-align: center; 
+    padding: 1rem ; 
     border:1px solid #ddd;
     box-shadow: 5px 5px 12px;
     
@@ -74,3 +73,14 @@ h2 {
     text-decoration: none;
     cursor: pointer;
   }
+@media (max-width: 700px){
+    .close {
+        right: 70px;
+    }
+    .modal-content {
+        padding: .5em;
+        width: 400px;
+        left: 50%;
+        margin-left: -200px;
+    }
+}

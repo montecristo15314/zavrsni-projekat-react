@@ -9,7 +9,7 @@ export default class NewMushroomComponent extends React.Component {
         commonName: '',
         latinName: '',
         description: '',
-        edibility: 'Indedible',
+        edibility: 'Inedible',
         image: ''
       };
     }
@@ -57,13 +57,13 @@ export default class NewMushroomComponent extends React.Component {
           <form onSubmit={this.handleSubmit}>
 
             <label>Common name: </label>
-            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeCommonName} />
+            <input type='text' placeholder='Common name' value={this.state.commonName} onChange={this.handleChangeCommonName} required="required" />
 
             <label>Latin name: </label>
-            <input type='text' placeholder='Latin name' value={this.state.latinName} onChange={this.handleChangeLatinName} />
+            <input type='text' placeholder='Latin name' value={this.state.latinName} onChange={this.handleChangeLatinName} required="required" />
 
             <label>Description: </label>
-            <input type='textarea' placeholder='Description' value={this.state.description} onChange={this.handleChangeDescription} />
+            <input type='textarea' placeholder='Description' value={this.state.description} onChange={this.handleChangeDescription} required="required" />
 
             <label>Edibility: </label>
             <select value={this.state.edibility} onChange={this.handleChangeEdibility}>
@@ -73,7 +73,7 @@ export default class NewMushroomComponent extends React.Component {
             </select>
 
             <label>Image URL: </label>
-            <input type='text' placeholder='Image URL' value={this.state.image} onChange={this.handleChangeImage}/>
+            <input type='text' placeholder='Image URL' value={this.state.image} onChange={this.handleChangeImage} required="required"/>
 
             <input type='submit' value='Submit' />
           </form>

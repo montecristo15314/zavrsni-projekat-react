@@ -3,6 +3,7 @@ import '../css/FooterComponent.css';
 import '../css/NewMushroomComponent.css';
 import '../css/ListofMushroomsComponent.css';
 import '../css/MushroomDetailsComponent.css';
+import '../css/HeaderComponent.css';
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
 import NewMushroomComponent from './NewMushroomComponent'

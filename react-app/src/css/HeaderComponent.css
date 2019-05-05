@@ -1,0 +1,24 @@
+.head-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-new-mushroom {
+ 
+    border: none;
+    width: 200px;
+    height: 3em;
+    background-image: linear-gradient(rgb(88, 149, 206), rgb(185, 185, 212));
+    color: rgb(100, 13, 13);
+    font-weight: bold;
+}
+.add-new-mushroom:hover {
+    color: yellow;
+}
+
+@media (max-width: 600px) {
+    .head-wrapper>h1 {
+        font-size: 1.5em;
+    }
+}

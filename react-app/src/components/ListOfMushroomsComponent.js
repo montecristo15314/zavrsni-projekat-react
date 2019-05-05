@@ -42,27 +42,29 @@ export default class ListOfMushroomsComponent extends React.Component {
     }
 
     renderMushroom = (mushroom) => {
-        return ( <div className="mushroom-wrapper" key={mushroom.id} onClick={() => { this.showMushroom(mushroom) }}>
-            <div>
-                <label>Common name: </label>
-                {mushroom.commonName}
-            </div>
-            <div>
-            <label>Latin name: </label>
-            {mushroom.latinName}
-            </div>
-            <p>Click to read more...</p>
-        </div>);
+        return (
+            <div className="mushroom-wrapper" key={mushroom.id} onClick={() => { this.showMushroom(mushroom) }}>
+
+                <div>
+                    <label>Common name: </label>
+                    {mushroom.commonName}
+                </div>
+                <div>
+                    <label>Latin name: </label>
+                    {mushroom.latinName}
+                </div>
+                <p>Click to read more...</p>
+            </div>);
     };
 
     render() {
         const { mushroom, mushroomDetailsVisible, mushrooms } = this.state;
 
         return (
-            <div>
+            <React.Fragment>
                 <MushroomDetailsComponent mushroom={mushroom} toggleVisibility={this.toggleVisibility} visibility={mushroomDetailsVisible} />
-                <div>{mushrooms.map(this.renderMushroom)}</div>
-            </div>
+                {mushrooms.map(this.renderMushroom)}
+            </React.Fragment>
         );
     }
 }
