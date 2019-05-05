@@ -21,7 +21,7 @@ export default class ListOfMushroomsComponent extends React.Component {
     }
 
     reloadMushroomsFromBackend = async () => {
-        const {data} = await mushroomService.getMushrooms();
+        const { data } = await mushroomService.getMushrooms();
 
         this.setState({
             mushrooms: data
@@ -42,12 +42,17 @@ export default class ListOfMushroomsComponent extends React.Component {
     }
 
     renderMushroom = (mushroom) => {
-        return (<li key={mushroom.id} onClick={() => {this.showMushroom(mushroom)}}>
-                    <label>Common name: </label>
-                    {mushroom.commonName}
-                    <label>Latin name: </label>
-                    {mushroom.latinName}
-                </li>);
+        return ( <div className="mushroom-wrapper" key={mushroom.id} onClick={() => { this.showMushroom(mushroom) }}>
+            <div>
+                <label>Common name: </label>
+                {mushroom.commonName}
+            </div>
+            <div>
+            <label>Latin name: </label>
+            {mushroom.latinName}
+            </div>
+            <p>Click to read more...</p>
+        </div>);
     };
 
     render() {
@@ -56,7 +61,7 @@ export default class ListOfMushroomsComponent extends React.Component {
         return (
             <div>
                 <MushroomDetailsComponent mushroom={mushroom} toggleVisibility={this.toggleVisibility} visibility={mushroomDetailsVisible} />
-                <ul>{mushrooms.map(this.renderMushroom)}</ul>
+                <div>{mushrooms.map(this.renderMushroom)}</div>
             </div>
         );
     }

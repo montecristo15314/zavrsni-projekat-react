@@ -1,0 +1,15 @@
+.modal-child-element {
+    display: block;
+}
+.modal-child-element>img {
+    width:400px;
+    height: 250px;
+}
+.modal-child-element>button {
+    border: none;
+    width: 70px;
+    height: 2em;
+    margin-top: 15px;
+    background-color: crimson;
+    border-radius: 5%;
+}

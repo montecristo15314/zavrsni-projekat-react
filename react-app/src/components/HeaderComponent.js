@@ -8,6 +8,7 @@ export default class HeaderComponent extends React.Component {
                 <h1>TODO: ubaciti header sa imenom iz localStorage i linkovima</h1>
                 <button onClick={this.props.toggleVisibility}>ADD NEW MUSHROOM</button>
             </div>
+           
         );
     }
 }

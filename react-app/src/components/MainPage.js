@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/FooterComponent.css';
 import '../css/NewMushroomComponent.css';
+import '../css/ListofMushroomsComponent.css';
+import '../css/MushroomDetailsComponent.css';
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
 import NewMushroomComponent from './NewMushroomComponent'
@@ -24,7 +26,9 @@ export default class MainPage extends React.Component {
 
                 <NewMushroomComponent toggleVisibility={this.toggleVisibility} visibility={newMushroomVisible} />
 
-                <ListOfMushroomsComponent />
+               <div className="listing-wrapper"> 
+                   <ListOfMushroomsComponent />
+               </div>
 
                 <FooterComponent />
             </div>
