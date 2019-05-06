@@ -17,3 +17,32 @@ App allow user to put new object on page after successfully filling and submitin
 
 ## Structure of project should look like this:
 
+Project:
+
+-- Node-Server
+ |   -index.js
+ |  -node-persist
+
+-- React-App
+|    -- public
+|        - favicon.ico
+|        - index.html
+|        - manifest.json
+|    -- src
+|        - components
+|            - FooterComponent.js
+|            - HeaderComponent.js
+|            - ListOfMushroomsComponents.js
+|            - MainPage.js
+|            - MushroomDetailsComponents.js
+|            - NewMushroomComponents.js
+|        - config
+|            - index.js
+|        - css 
+|        - services 
+|            - HttpService.js
+|           - MushroomService.js
+|    - App.js|
+
+    | README.md
+        
