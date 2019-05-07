@@ -75,7 +75,7 @@ h2 {
   }
 @media (max-width: 700px){
     .close {
-        right: 70px;
+        right: 10px;
     }
     .modal-content {
         padding: .5em;

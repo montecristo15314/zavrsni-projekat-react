@@ -9,16 +9,44 @@
     border: none;
     width: 200px;
     height: 3em;
-    background-image: linear-gradient(rgb(88, 149, 206), rgb(185, 185, 212));
-    color: rgb(100, 13, 13);
+    background-image: linear-gradient(rgb(26, 54, 82), rgb(100, 100, 128));
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 .add-new-mushroom:hover {
-    color: yellow;
+    color: gold;
 }
-
+.banner-img {
+    width: 80%;
+    height: 50vh;
+    background-image: url(../banner.jpg);
+    margin-top: 20px;
+}
+@media (max-width: 1200px){
+    .banner-img {
+        /* width: 60%; */
+        height: 40vh;
+        width: 100%;
+    }
+}
+@media (max-width: 850px){
+    .banner-img {
+        height: 30vh;
+        width: 100%;
+    }
+}
 @media (max-width: 600px) {
     .head-wrapper>h1 {
         font-size: 1.5em;
+    }
+   .head-wrapper .banner-img {
+        display: flex;
+       background-image: url(../small-banner.png);
+       background-repeat: no-repeat;
+       margin: 10px auto;
+       padding: 0;
+       width: 320px;
+      
+        
     }
 }

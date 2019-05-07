@@ -13,3 +13,12 @@
     background-color: crimson;
     border-radius: 5%;
 }
+.modal-child-element {
+    padding: .2em;
+}
+.modal-child-element:nth-child(2){
+    font-style: italic;
+}
+.modal-child-element:nth-child(4){
+    font-size: 13px;
+}

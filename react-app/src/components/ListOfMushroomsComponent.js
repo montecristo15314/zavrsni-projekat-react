@@ -54,6 +54,7 @@ export default class ListOfMushroomsComponent extends React.Component {
                     {mushroom.latinName}
                 </div>
                 <p>Click to read more...</p>
+              
             </div>);
     };
 

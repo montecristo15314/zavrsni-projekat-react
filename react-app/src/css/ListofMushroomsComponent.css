@@ -13,6 +13,7 @@
     flex-direction: column;
     width: 300px;
     height: 150px;
+    background-color: rgb(234, 240, 183);
     border: 5px double crimson;
     justify-content: center;
     text-align: center;
@@ -21,15 +22,18 @@
     
 }
 
+
 .mushroom-wrapper>div:nth-child(2){
     font-style: italic;
     
 }
 
 .mushroom-wrapper>p {
-    color: blue;
+    color: rgb(2, 3, 78);
     font-style: italic;
+    font-weight: bold;
     font-size: 15px;
+    opacity: .7;
     
 }
 

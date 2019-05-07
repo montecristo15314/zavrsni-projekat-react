@@ -2,10 +2,14 @@
 ## React.js project
 
 For launching application successfully in both ``(after positioning with ``     	<b>cd</b>  `` command in terminal properly)`` **Node-Server** and **React-app** user need first to install *node-modules* with:
-``npm install`` 
+
+```npm install```
+
 For that task, 2 running terminals are required.
 After installing, once again in **both** open terminals user should start:
-``npm run start``,
+
+``npm run start``
+
 **node-server** will start back-end, while **react-app** will start front-end app in default browser ``(chrome/mozilla/safari recommended)``.
 
 ## What tasks app provide:
@@ -18,31 +22,32 @@ App allow user to put new object on page after successfully filling and submitin
 ## Structure of project should look like this:
 
 Project:
-
+```
 -- Node-Server
- |   -index.js
- |  -node-persist
+    |   -index.js
+    |  -node-persist
 
 -- React-App
-|    -- public
-|        - favicon.ico
-|        - index.html
-|        - manifest.json
-|    -- src
-|        - components
-|            - FooterComponent.js
-|            - HeaderComponent.js
-|            - ListOfMushroomsComponents.js
-|            - MainPage.js
-|            - MushroomDetailsComponents.js
-|            - NewMushroomComponents.js
-|        - config
-|            - index.js
-|        - css 
-|        - services 
-|            - HttpService.js
-|           - MushroomService.js
-|    - App.js|
-
-    | README.md
+    |    -- public
+    |            - favicon.ico
+    |            - index.html
+    |            - manifest.json
+    |    -- src
+    |        - components
+    |            - FooterComponent.js
+    |            - HeaderComponent.js
+    |            - ListOfMushroomsComponents.js
+    |            - MainPage.js
+    |            - MushroomDetailsComponents.js
+    |            - NewMushroomComponents.js
+    |        - config
+    |            - index.js
+    |        - css 
+    |        - services 
+    |            - HttpService.js
+    |            - MushroomService.js
+    |    - App.js
+    |    - App.css   
+-- README.md
         
+```
