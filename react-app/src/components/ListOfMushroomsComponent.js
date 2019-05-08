@@ -14,7 +14,7 @@ export default class ListOfMushroomsComponent extends React.Component {
         await this.reloadMushroomsFromBackend();
     }
 
-    async componentDidUpdate(prevProps, prevState) {
+    async componentDidUpdate(/*prevProps, */prevState) {
         if (prevState.mushroomDetailsVisible && !this.state.mushroomDetailsVisible) {
             await this.reloadMushroomsFromBackend();
         }

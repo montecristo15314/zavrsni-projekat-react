@@ -12,6 +12,7 @@
     background-image: linear-gradient(rgb(26, 54, 82), rgb(100, 100, 128));
     color: rgb(255, 255, 255);
     font-weight: bold;
+    margin: 40px;
 }
 .add-new-mushroom:hover {
     color: gold;

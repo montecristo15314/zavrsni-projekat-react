@@ -7,6 +7,7 @@
     font: normal 16px sans-serif; 
     padding: 45px 50px;
     margin-top: 80px;
+    
 
   }
   
@@ -20,7 +21,6 @@
   
   .footer-info  p.footer-links{
     font-size:18px;
-    width: fit-content;
     font-weight: bold;
     color:  #000000;
     margin: 0 0 10px;
